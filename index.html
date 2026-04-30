@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CV di [Il tuo nome] - [Il tuo titolo professionale]">
+    <title>Marco Riformetti</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f4f4f4;
+            padding: 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        header {
+            background: linear-gradient(135deg, #2c3e50, #1a1a2e);
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+        }
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        .content {
+            padding: 30px;
+        }
+        section {
+            margin-bottom: 30px;
+        }
+        h2 {
+            color: #2c3e50;
+            border-bottom: 3px solid #2c3e50;
+            padding-bottom: 8px;
+            margin-bottom: 20px;
+        }
+        .job, .education-item {
+            margin-bottom: 20px;
+        }
+        .job-title {
+            font-weight: bold;
+            font-size: 1.1rem;
+            color: #1a1a2e;
+        }
+        .company, .date {
+            color: #666;
+            font-size: 0.9rem;
+        }
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        ul li {
+            padding: 5px 0;
+            padding-left: 20px;
+            position: relative;
+        }
+        ul li:before {
+            content: "•";
+            color: #2c3e50;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .skill-tag {
+            background: #2c3e50;
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+        }
+        footer {
+            background: #1a1a2e;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        footer a {
+            color: #66b0ff;
+            text-decoration: none;
+        }
+        @media (max-width: 600px) {
+            header h1 { font-size: 1.8rem; }
+            .content { padding: 20px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Marco Riformetti</h1>
+            <p>Insegnante | Pietrasanta, Lucca, Italia</p>
+        </header>
+        
+        <div class="content">
+            <section>
+                <h2>Chi sono</h2>
+                <p>Sono in insegnante della scuola secondaria superiore. Insegno materie come informatica, elettronica, elettrotecnica...</p>
+            </section>
+
+            <section>
+                <h2>Esperienze lavorative</h2>
+                <div class="job">
+                    <div class="job-title">Insegnante</div>
+                    <div class="company">ITT Galilei</div>
+                    <div class="date">a.s. 2026-2026</div>
+                    <ul>
+                        <li>Insegnante al diurno</li>
+                        <li>Insegnante al serale</li>
+                    </ul>
+                </div>
+                <!-- Aggiungi altre esperienze copiando il blocco sopra -->
+            </section>
+
+            <section>
+                <h2>Formazione</h2>
+                <div class="education-item">
+                    <div class="job-title">Laurea (v.o.)</div>
+                    <div class="company">Università degli studi di Firenze</div>
+                    <div class="date">1997</div>
+                </div>
+            </section>
+
+            <section>
+                <h2>Competenze tecniche</h2>
+                <div class="skills">
+                    <span class="skill-tag">IA</span>
+                    <span class="skill-tag">Simulatori</span>
+                </div>
+            </section>
+
+            <section>
+                <h2>Lingue</h2>
+                <ul>
+                    <li>Italiano – Madrelingua</li>
+                    <li>Inglese – Intermedio</li>
+                </ul>
+            </section>
+        </div>
+
+        <footer>
+            <p><a href="mailto:marco.riformetti@gmail.com">marco.riformetti@gmail.com</a> | +39 339 450 5810</p>
+            <p>🔗 <a href="#">LinkedIn</a> | <a href="#">GitHub</a></p>
+        </footer>
+    </div>
+</body>
+</html>
