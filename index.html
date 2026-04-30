@@ -2,321 +2,243 @@
 <html lang="it">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <meta name="description" content="CV di Marco Riformetti - formazione, esperienze e competenze">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Marco Riformetti - CV</title>
     <style>
-        /* RESET & BASE - Testo più grande e responsive */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
+        /* MODIFICA 1: TESTO PIÙ GRANDE */
         body {
-            /* Font base più grande (18px invece dei soliti 16px) */
-            font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
-            font-size: 18px;        /* <--- TESTO PIÙ GRANDE */
-            line-height: 1.5;
-            color: #1a1a2e;
-            background: #eef2f5;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f4f4f4;
             padding: 20px;
+            font-size: 18px;  /* <--- PRIMA ERA PICCOLISSIMO, ORA 18px */
         }
-
-        /* CONTAINER RESPONSIVE (larghezza dinamica) */
+        
+        /* MODIFICA 2: LARGHEZZA DINAMICA (NON PIÙ FISSA) */
         .container {
-            /* Larghezza massima, ma senza larghezza fissa */
-            max-width: 1200px;
-            width: 100%;
+            max-width: 1200px;  /* <--- PRIMA ERA width: 800px (FISSA), ORA È max-width */
+            width: 100%;        /* <--- OCCUPA TUTTO LO SPAZIO DISPONIBILE */
             margin: 0 auto;
             background: white;
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-            overflow: hidden;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
         }
-
-        /* HEADER MODERNO */
+        
+        /* RESTO IDENTICO AL TUO ORIGINALE */
         header {
-            background: linear-gradient(135deg, #1e3c72, #2a5298);
-            color: white;
             text-align: center;
-            padding: 3rem 2rem;
+            margin-bottom: 20px;
         }
-        header h1 {
-            font-size: 2.8rem;
-            letter-spacing: 1px;
-            margin-bottom: 0.5rem;
-            font-weight: 600;
+        h1 {
+            margin: 0;
+            font-size: 2em;
         }
-        header h1 span {
-            font-weight: 300;
-        }
-        header p {
-            font-size: 1.2rem;
-            opacity: 0.9;
-            margin-bottom: 0.5rem;
-        }
-        .sub {
-            font-size: 1rem;
-            opacity: 0.8;
-            border-top: 1px solid rgba(255,255,255,0.3);
-            display: inline-block;
-            padding-top: 0.5rem;
-            margin-top: 0.5rem;
-        }
-
-        /* LAYOUT A COLONNE PER SCHERMI GRANDI (RESPONSIVE) */
-        .cv-main {
-            display: flex;
-            flex-wrap: wrap;  /* <-- fondamentale per il responsive */
-        }
-        .sidebar {
-            flex: 1.2;
-            background: #f8fafc;
-            padding: 1.8rem;
-            border-right: 1px solid #e2e8f0;
-        }
-        .content {
-            flex: 2.8;
-            padding: 1.8rem;
-        }
-
-        /* TITOLI SEZIONI */
         h2 {
-            font-size: 1.6rem;
-            color: #1e3c72;
-            border-left: 5px solid #2a5298;
-            padding-left: 15px;
-            margin: 1.5rem 0 1rem 0;
-        }
-        .sidebar h2 {
-            border-left-color: #4b7bb8;
-            font-size: 1.4rem;
-            margin-top: 0;
+            background: #333;
+            color: white;
+            padding: 5px;
+            margin-top: 20px;
         }
         h3 {
-            font-size: 1.2rem;
-            font-weight: 600;
-            color: #2c3e50;
-            margin: 1rem 0 0.3rem 0;
-        }
-
-        /* CONTATTI E INFO LATERALI */
-        .contact-info {
-            margin-bottom: 2rem;
-        }
-        .contact-item {
-            margin-bottom: 0.8rem;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            flex-wrap: wrap;
-            font-size: 0.95rem;
-        }
-        .contact-item strong {
-            min-width: 70px;
-            font-weight: 600;
-            color: #0f2b3d;
-        }
-        a {
-            color: #2a5298;
-            text-decoration: none;
-            word-break: break-all;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-
-        /* ESPERIENZE, FORMAZIONE, ECC. */
-        .job, .education, .course {
-            margin-bottom: 1.2rem;
-            border-bottom: 1px solid #eef2f5;
-            padding-bottom: 0.8rem;
-        }
-        .job-title {
-            font-weight: 700;
-            font-size: 1.1rem;
-        }
-        .company, .date, .location {
-            font-size: 0.9rem;
-            color: #4a5568;
-            margin: 4px 0;
-        }
-        ul {
-            margin-left: 1.5rem;
-            margin-top: 6px;
-        }
-        li {
             margin-bottom: 5px;
         }
-        .skills {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            margin-top: 10px;
-        }
-        .skill-tag {
-            background: #e2e8f0;
-            padding: 4px 12px;
-            border-radius: 30px;
-            font-size: 0.85rem;
-            color: #1e293b;
-        }
-
-        /* FOOTER */
-        footer {
-            background: #1e293b;
-            color: #cbd5e1;
+        .contact {
             text-align: center;
-            padding: 1.2rem;
-            font-size: 0.85rem;
-            border-top: 1px solid #334155;
+            margin-bottom: 20px;
         }
-
-        /* RESPONSIVE: SU SCHERMI PICCOLI (MOBILE) */
+        .section {
+            margin-bottom: 20px;
+        }
+        .job {
+            margin-bottom: 15px;
+        }
+        .job-title {
+            font-weight: bold;
+        }
+        .date {
+            color: #666;
+            font-size: 0.9em;
+        }
+        ul {
+            margin-top: 5px;
+            padding-left: 20px;
+        }
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.8em;
+            color: #666;
+        }
+        a {
+            color: #333;
+        }
+        
+        /* RESPONSIVE PER SCHERMI PICCOLI (OPZIONALE) */
         @media (max-width: 768px) {
             body {
-                font-size: 16px;   /* leggermente più piccolo ma comunque leggibile */
                 padding: 10px;
             }
-            header h1 {
-                font-size: 2rem;
-            }
-            .sidebar {
-                border-right: none;
-                border-bottom: 1px solid #e2e8f0;
-            }
-            .contact-item {
-                font-size: 0.9rem;
-            }
-            h2 {
-                font-size: 1.4rem;
-            }
-        }
-
-        @media (max-width: 480px) {
-            body {
-                font-size: 15px;
-            }
             .container {
-                border-radius: 12px;
-            }
-            .sidebar, .content {
-                padding: 1.2rem;
-            }
-        }
-
-        /* STAMPA */
-        @media print {
-            body {
-                background: white;
-                font-size: 11pt;
-                padding: 0;
-            }
-            .container {
-                max-width: 100%;
-                box-shadow: none;
-            }
-            a {
-                text-decoration: none;
-                color: black;
-            }
-            .sidebar {
-                background: #f4f4f4;
+                padding: 15px;
             }
         }
     </style>
 </head>
 <body>
-<div class="container">
-    <header>
-        <h1>Marco <span>Riformetti</span></h1>
-        <p>formazione · ricerca sociale · information technology</p>
-        <div class="sub">consulente, docente, sistemista, sviluppatore</div>
-    </header>
+    <div class="container">
+        <header>
+            <h1>Marco Riformetti</h1>
+            <p>formazione, ricerca sociale, information technology ++</p>
+        </header>
 
-    <div class="cv-main">
-        <!-- COLONNA SINISTRA (CONTATTI E COMPETENZE CHIAVE) -->
-        <div class="sidebar">
-            <div class="contact-info">
-                <h2>Contatti</h2>
-                <div class="contact-item"><strong>📍</strong> Via Crociale 11, Pietrasanta (LU)</div>
-                <div class="contact-item"><strong>📞</strong> 339 4505810</div>
-                <div class="contact-item"><strong>✉️</strong> <a href="mailto:marco.riformetti@example.com">marco.riformetti@example.com</a></div>
-                <div class="contact-item"><strong>🔗</strong> <a href="#">LinkedIn: /in/marco-riformetti-30951317</a></div>
-                <div class="contact-item"><strong>🎂</strong> 4 luglio 1965, Viareggio (LU)</div>
-            </div>
+        <div class="contact">
+            <p>📍 Via Crociale 11, Pietrasanta (LU) | 📞 339.4505810 | ✉️ marco.riformetti@example.com</p>
+            <p>🔗 <a href="#">LinkedIn: /in/marco-riformetti-30951317</a></p>
+        </div>
 
-            <div class="skills-section">
-                <h2>Competenze</h2>
-                <div class="skills">
-                    <span class="skill-tag">Python / R</span>
-                    <span class="skill-tag">Data Mining</span>
-                    <span class="skill-tag">NLP</span>
-                    <span class="skill-tag">Machine Learning</span>
-                    <span class="skill-tag">Network Security</span>
-                    <span class="skill-tag">Linux / CentOS</span>
-                    <span class="skill-tag">Java / JSP</span>
-                    <span class="skill-tag">WordPress / Drupal</span>
-                    <span class="skill-tag">ETL (Pentaho)</span>
-                    <span class="skill-tag">VMware / DB2 / Oracle</span>
-                </div>
-            </div>
+        <!-- FORMAZIONE -->
+        <div class="section">
+            <h2>Formazione</h2>
+            <p><strong>LVO Ingegneria Informatica</strong> - Università di Firenze (101/110)</p>
+            <p><strong>LT Filosofia</strong> - Università di Pisa (110/110 con lode)</p>
+            <p><strong>LM Sociologia e ricerca sociale</strong> - Università di Pisa (110/110 con lode)</p>
+            <p><strong>Iscritto al primo anno del Corso di Laurea Magistrale in Storia e civiltà</strong> - Università di Pisa</p>
+        </div>
 
-            <div class="languages">
-                <h2>Lingue</h2>
+        <!-- ESPERIENZE LAVORATIVE -->
+        <div class="section">
+            <h2>Attività professionali</h2>
+            
+            <div class="job">
+                <div class="job-title">Docente - Istituti scolastici e agenzie formative</div>
+                <div class="date">Anni vari</div>
                 <ul>
-                    <li><strong>Italiano</strong> – madrelingua</li>
-                    <li><strong>Inglese</strong> – B1 (lettura eccellente, scritto/orale buono)</li>
-                    <li><strong>Tedesco</strong> – A2 elementare</li>
-                    <li><strong>Francese / Spagnolo</strong> – base</li>
+                    <li>IPSIA "G. Giorgi" Lucca - Tecnologie Informatiche, Elettrotecnica, Automotive</li>
+                    <li>Istituto "B. Croce" Lucca - Informatica per ITI, LSA, AFM</li>
+                    <li>ITT "G. Galilei" Viareggio - Informatica, Telecomunicazioni, Progettazione Sistemi</li>
+                    <li>Liceo Artistico "S. Stagi" - Sostegno materie tecnico-scientifiche</li>
+                    <li>Serindform (MS) - Network Security/Privacy, Network Monitoring</li>
+                    <li>Teseo - Hardware e Reti industriali (PLC)</li>
                 </ul>
             </div>
-            <div class="patenti">
-                <h2>Patenti</h2>
-                <p>Auto B, guida gommoni fino a 8 m</p>
+
+            <div class="job">
+                <div class="job-title">Analista di sistemi - TD Group @ Data Center Regione Toscana (TIX)</div>
+                <div class="date">Febbraio 2011 - Dicembre 2017</div>
+                <ul>
+                    <li>Mappatura sistemi cloud della Pubblica Amministrazione toscana</li>
+                    <li>Operatività presso Network Operations Center (NOC)</li>
+                    <li>Tecnologie: CMDBuild, VMware, OCS Inventory</li>
+                </ul>
+            </div>
+
+            <div class="job">
+                <div class="job-title">Project Manager / Sviluppatore - TD Group</div>
+                <div class="date">2009-2011</div>
+                <ul>
+                    <li>Claim Management Web Return per Ferragamo (JSF, JMS, PL/SQL, Jboss, DB2, Spring, Hibernate)</li>
+                    <li>Progetto trattamento dati personali Regione Toscana (Javascript/JSP, DB2)</li>
+                    <li>Sistema monitoraggio dipendenti Regione Toscana (Java, Struts 2, Hibernate)</li>
+                    <li>Sito istituzionale Comune di Vicopisano (Drupal 7, MySQL, Oracle)</li>
+                </ul>
+            </div>
+
+            <div class="job">
+                <div class="job-title">Analista/Sviluppatore - Negentis, Navionics, ENEL Ricerca</div>
+                <div class="date">2008-2010</div>
+                <ul>
+                    <li>ETL con Pentaho Data Integration per Business Intelligence</li>
+                    <li>Sincronizzazione plotter nautici e iPhone (C++, QT, XML)</li>
+                    <li>Simulatore combustione cogassificatore ENEL (JAVA, Fortran, Linux)</li>
+                </ul>
+            </div>
+
+            <div class="job">
+                <div class="job-title">Security Consultant - Netix/SecureWay (Gruppo ITWay)</div>
+                <div class="date">1997-2007</div>
+                <ul>
+                    <li>Installazione e configurazione Firewall CheckPoint FW-1</li>
+                    <li>High Availability con StoneBeat, VPN, IDS RealSecure</li>
+                    <li>Docente sicurezza informatica per Ministero della Sanità (per conto Sun Microsystems)</li>
+                </ul>
+            </div>
+
+            <div class="job">
+                <div class="job-title">Formatore - IFOA Bologna, Provincia Massa-Carrara, Università Firenze</div>
+                <div class="date">1993-1996</div>
+                <ul>
+                    <li>Moduli su Sistemi Operativi, Reti Locali, Sicurezza informatica</li>
+                    <li>Tutor per studenti Ingegneria Firenze su rete Novell</li>
+                </ul>
             </div>
         </div>
 
-        <!-- COLONNA DESTRA (ESPERIENZE, FORMAZIONE, ATTIVITÀ) -->
-        <div class="content">
-            <!-- Formazione -->
-            <h2>🎓 Formazione</h2>
-            <div class="education"><span class="job-title">LVO Ingegneria Informatica</span><br>Università di Firenze (101/110)</div>
-            <div class="education"><span class="job-title">LT Filosofia</span><br>Università di Pisa (110/110 con lode)</div>
-            <div class="education"><span class="job-title">LM Sociologia e ricerca sociale</span><br>Università di Pisa (110/110 con lode)</div>
-            <div class="education"><span class="job-title">Iscrizione Magistrale Storia e civiltà</span><br>Università di Pisa – in corso</div>
-
-            <h2>💼 Esperienze professionali</h2>
-            <div class="job"><span class="job-title">Docente Informatica / Sicurezza</span><div class="company">IPSIA G. Giorgi (Lucca) · Istituto B. Croce · ITT G. Galilei · Liceo S. Stagi · Serindform · Teseo</div><div class="date">Anni vari</div><ul><li>Insegnamenti: Tecnologie Informatiche, Reti, Sicurezza, Elettrotecnica, Sistemi operativi, Linux, Networking, Programmazione.</li></ul></div>
-            <div class="job"><span class="job-title">Analista di sistemi – Data Center Regione Toscana (TIX)</span><div class="company">TD Group, Pisa</div><div class="date">Feb 2011 – Dic 2017</div><ul><li>Mappatura sistemi cloud PA toscana, monitoraggio NOC. Strumenti: CMDBuild, VMware, OCS Inventory.</li></ul></div>
-            <div class="job"><span class="job-title">Project Manager & Sviluppatore</span><div class="company">TD Group, Negentis, Navionics, Enel Ricerca</div><div class="date">2000–2011</div><ul><li>Gestione resi Ferragamo (JSF, JMS, DB2, Spring, Hibernate).</li><li>Progetti BI con Pentaho Kettle, sviluppo portali istituzionali Drupal.</li><li>Sincronizzazione plotter nautici (C++, QT). Simulatore combustione ENEL (Java/Fortran).</li></ul></div>
-            <div class="job"><span class="job-title">Security Consultant</span><div class="company">Netix / SecureWay (gruppo ITWay), DS Data Systems</div><div class="date">1997–2007</div><ul><li>Configurazione Firewall CheckPoint, High Availability StoneBeat, VPN, IDS RealSecure. Docente sicurezza per Ministero Sanità.</li></ul></div>
-            <div class="job"><span class="job-title">Docente formatore</span><div class="company">IFOA Bologna, Provincia Massa-Carrara, Università Firenze</div><div class="date">1993–1996</div><ul><li>Moduli su Sistemi Operativi, Reti locali, Sicurezza informatica, Novell Netware.</li></ul></div>
-
-            <h2>📚 Formazione continua & MOOC</h2>
-            <ul><li>Data Science (Python, R, Text Mining con Knime)</li><li>Ethical Hacking, Penetration Testing, Network Administration</li><li>Network Security / Privacy (corso Network Specialist @ Serindform)</li><li>Hardware e reti industriali PLC @ Teseo</li><li>Corsi: Alfresco, StoneBeat, Check Point CCSA, Dynamo 5.1, getAccess SSO</li></ul>
-
-            <h2>🛠️ Tecnologie e strumenti</h2>
-            <div class="skills">
-                <span class="skill-tag">Linux/Unix</span> <span class="skill-tag">CentOS</span> <span class="skill-tag">VMware</span> <span class="skill-tag">Oracle/DB2/MySQL</span>
-                <span class="skill-tag">Java/JSP/Servlet</span> <span class="skill-tag">Spring/Hibernate</span> <span class="skill-tag">C++/QT</span>
-                <span class="skill-tag">PHP/WordPress/Joomla</span> <span class="skill-tag">Drupal</span> <span class="skill-tag">Pentaho Kettle</span>
-                <span class="skill-tag">Wireshark</span> <span class="skill-tag">IPTables</span> <span class="skill-tag">Metasploit</span>
-                <span class="skill-tag">Inkscape/Illustrator</span> <span class="skill-tag">InDesign</span> <span class="skill-tag">Calibre</span>
-            </div>
-
-            <h2>🔬 Research assistant & tirocinio</h2>
-            <div class="job"><span class="job-title">MediaLab – Università di Pisa</span><div class="date">Topic Modeling per analisi comunicazione politica su social media</div><div>Big Data, Text Mining, NLP, R, Knime.</div></div>
-
-            <h2>🧑‍🏫 Altre attività</h2>
-            <ul><li>Sviluppo e manutenzione siti web (CMS: WordPress, Joomla, Drupal, anche progetti da zero).</li><li>Self learning su eLearning (Moodle, Articulate, eDx).</li><li>In passato: barman, mozzo su imbarcazione, steward, operaio marmo, servizio militare Marina Militare.</li></ul>
-            <p style="margin-top: 1rem; font-size: 0.85rem; color: #4b5563;">📄 “Autorizzo al trattamento dei miei dati personali ai sensi del D.Lgs n. 196/2003” – Settembre 2022</p>
+        <!-- CORSI E CERTIFICAZIONI -->
+        <div class="section">
+            <h2>Corsi e certificazioni</h2>
+            <ul>
+                <li>MOOC: Data Science (Python, R, Text Mining con Knime)</li>
+                <li>MOOC: Ethical Hacking, Penetration Testing, Network Administration</li>
+                <li>Corso "Network Specialist" - Network Security/Privacy (Serindform)</li>
+                <li>Corso PLC - Hardware e Reti industriali (Teseo)</li>
+                <li>Check Point Certified Security Administrator (CCSA)</li>
+                <li>StoneBeat (High Availability) - certificazione Manager</li>
+                <li>Corso Dynamo 5.1 - Java Developers, Personalization Server, Web Commerce</li>
+                <li>getAccess 3.2 - Single Sign On (SSO)</li>
+                <li>Corso "Piattaforma Alfresco" (Pisa, 2013)</li>
+            </ul>
         </div>
+
+        <!-- COMPETENZE TECNICHE -->
+        <div class="section">
+            <h2>Competenze tecniche</h2>
+            <ul>
+                <li>CMS: WordPress, Joomla, Drupal</li>
+                <li>Desktop Publishing: CorelDraw, Inkscape, Adobe Illustrator</li>
+                <li>Editoria digitale: InDesign, Calibre</li>
+                <li>Sicurezza: Firewall, VPN, IDS, penetration testing</li>
+                <li>Sistemi: Linux (CentOS, Ubuntu), Windows, VMware</li>
+                <li>Database: Oracle, DB2, MySQL, Informix</li>
+                <li>Linguaggi: Java, C++, Python, R, Fortran, JavaScript, PHP</li>
+            </ul>
+        </div>
+
+        <!-- LINGUE -->
+        <div class="section">
+            <h2>Lingue</h2>
+            <ul>
+                <li>Italiano - Madrelingua</li>
+                <li>Inglese - B1 (lettura eccellente, scrittura buona, orale buono)</li>
+                <li>Tedesco - A2 elementare</li>
+                <li>Francese - elementare</li>
+                <li>Spagnolo - elementare (buona lettura)</li>
+            </ul>
+        </div>
+
+        <!-- RESEARCH -->
+        <div class="section">
+            <h2>Research Assistant</h2>
+            <p><strong>MediaLab - Università di Pisa</strong></p>
+            <p>Studio comparato algoritmi statistici di Topic Modeling per analisi comunicazione politica sui social media</p>
+            <p><em>Keywords: Big Data, Data/Text Mining, Natural Language Processing, Machine Learning, R, Knime</em></p>
+        </div>
+
+        <!-- ALTRO -->
+        <div class="section">
+            <h2>Altre informazioni</h2>
+            <ul>
+                <li>Data e luogo di nascita: 4 luglio 1965, Viareggio (LU)</li>
+                <li>Patenti: Auto B, guida gommoni fino a 8 metri</li>
+                <li>Servizio militare: Marina Militare (La Spezia, Maddalena)</li>
+            </ul>
+        </div>
+
+        <footer>
+            <p>"Autorizzo al trattamento dei miei dati personali ai sensi e per gli effetti del D.Lgs n. 196 del 30 giugno 2003"</p>
+            <p>Settembre 2022 - Marco Riformetti</p>
+        </footer>
     </div>
-    <footer>
-        Marco Riformetti – CV online – aggiornato al 2025
-    </footer>
-</div>
 </body>
 </html>
